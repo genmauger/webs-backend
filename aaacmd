@@ -1,0 +1,4 @@
+npm i express --save
+npm add mongoose --save
+npm add cors --save
+npm add -D nodemon
