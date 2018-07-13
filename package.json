@@ -4,8 +4,19 @@
   "description": "The backend section of our WEBS project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "seed": "node ./workshops/workshopsSeed.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.1"
+  }
 }
