@@ -1,10 +1,13 @@
+require('dotenv').config() 
 const mongoose = require('mongoose')
 
 // mongodb+srv://svetos:<PASSWORD>@cluster0-cig9q.mongodb.net/test?retryWrites=true
-const url = 'mongodb+srv://cluster0-cig9q.mongodb.net/'
+//  useNewUrlParser: true, promiseLibrary: global.Promise
+const url = process.env.MONGO_URI
 const options = {
-    user: 'svetos',
-    pass: 'mojtemota',
+   
+    user: process.env.MONGO_USER,
+    pass: process.env.MONGO_PASS,
     dbName: 'webs_db',
     promiseLibrary: global.Promise
 }
