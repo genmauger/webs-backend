@@ -8,7 +8,7 @@ const options = {
    
     user: process.env.MONGO_USER,
     pass: process.env.MONGO_PASS,
-    dbName: 'webs_db',
+    dbName: process.env.MONGO_DBNAME,
     promiseLibrary: global.Promise
 }
 
