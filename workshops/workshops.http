@@ -1,0 +1,29 @@
+###
+POST http://localhost:3000/workshops 
+Content-Type: application/json
+
+{
+    "title": "TEST",
+    "facilitators": "Tyson Butler-Boschma ",
+    "attendees": 0,
+    "status": "Pending",
+    "creator": null,
+    "notes": "TEST DATA",
+    "onsite": true,
+    "price": 55000,
+    "organisation": "CA Mel"
+}
+
+###
+PUT http://localhost:3000/workshops/5b4ad409fd4e1b0351ae9838/new
+Content-Type: application/json
+
+            {
+                "start": "12/12/2018 10:00",
+                "end": "12/12/2018 13:00",
+                "location": "Room 1212"
+            }
+
+###
+PUT http://localhost:3000/workshops/5b4ad409fd4e1b0351ae9838/5b4b22dcdcd7b805be5c4be5/remove
+Content-Type: application/json
