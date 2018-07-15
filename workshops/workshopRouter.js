@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 })
 
 
-router.post('/', (req, res) => {
+router.post('/new', (req, res) => {
 
     const workshop = new Workshop(req.body)
     workshop.save()

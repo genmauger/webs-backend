@@ -1,21 +1,22 @@
 ###
-POST http://localhost:3000/workshops 
+POST http://localhost:3000/workshops/new
 Content-Type: application/json
 
 {
-    "title": "TEST",
+    "title": "XXXXX",
     "facilitators": "Tyson Butler-Boschma ",
     "attendees": 0,
     "status": "Pending",
     "creator": null,
-    "notes": "TEST DATA",
+    "notes": "XXXXX DATA",
     "onsite": true,
     "price": 55000,
-    "organisation": "CA Mel"
+    "organisation": "CA Mel",
+    "bookings": []
 }
 
 ###
-PUT http://localhost:3000/workshops/5b4ad409fd4e1b0351ae9838/new
+PUT http://localhost:3000/workshops/5b4b3a0f6f767c048107a63c/new
 Content-Type: application/json
 
             {
@@ -25,5 +26,5 @@ Content-Type: application/json
             }
 
 ###
-PUT http://localhost:3000/workshops/5b4ad409fd4e1b0351ae9838/5b4b22dcdcd7b805be5c4be5/remove
+PUT http://localhost:3000/workshops/5b4b3a0f6f767c048107a63c/5b4b3a316f767c048107a63f/remove
 Content-Type: application/json
