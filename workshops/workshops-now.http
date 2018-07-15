@@ -1,0 +1,30 @@
+###
+POST https://webs-backend-dcddkpohng.now.sh/workshops/new
+Content-Type: application/json
+
+{
+    "title": "XXXXX",
+    "facilitators": "Tyson Butler-Boschma ",
+    "attendees": 0,
+    "status": "Pending",
+    "creator": null,
+    "notes": "XXXXX DATA",
+    "onsite": true,
+    "price": 55000,
+    "organisation": "CA Mel",
+    "bookings": []
+}
+
+###
+PUT https://webs-backend-dcddkpohng.now.sh/workshops/5b4b3e6f12fdc0005038ef75/new
+Content-Type: application/json
+
+            {
+                "start": "11/22/2018 10:00",
+                "end": "11/22/2018 13:00",
+                "location": "Room 1212"
+            }
+
+###
+PUT https://webs-backend-dcddkpohng.now.sh/workshops/5b4b3e6f12fdc0005038ef75/5b4b3ed612fdc0005038ef79/remove
+Content-Type: application/json
