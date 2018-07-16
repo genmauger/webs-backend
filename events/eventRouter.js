@@ -14,6 +14,17 @@ router.get('/', (req, res) => {
 })
 
 
+router.patch("/:id", (req, res, next) => {
+    // const id = req.params.productId;
+    const id = req.params.id
+    
+    Event.findByIdAndUpdate({ _id: id },  req.body, {new: true}, function(err, event) {
+        if (err) return res.status(500).send(err);
+        return res.json(event);
+    });
+  });
+       
+
 router.post('/new', (req, res) => {
 
     const event = new Event(req.body)

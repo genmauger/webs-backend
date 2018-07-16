@@ -16,6 +16,26 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3000/events
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/events/5b4bf3f650c8340440a587bd
+Content-Type: application/json
+
+{
+    "title": "AAAAAAAAA",
+    "facilitators": "AAAAAAAAA Tyson Butler-Boschma ",
+    "attendees": 10,
+    "status": "AAPending",
+    "creator": "AAAAAAAAA",
+    "notes": "AAAAAAAAA DATA",
+    "onsite": false,
+    "price": 555000,
+    "organisation": "CA Mel AAAA"
+}
+
+###
 PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/new
 Content-Type: application/json
 
