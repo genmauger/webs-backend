@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express()
 
-const itemRouter = require('./items/itemRouter')
+const eventRouter = require('./events/eventRouter')
 // const authRouter = require('./auth/authRouter')
 
 const PORT = 3000
@@ -19,7 +19,7 @@ const corsOptions = {
  }
 app.use(cors(corsOptions))
 
-app.use('/items', itemRouter)
+app.use('/events', eventRouter)
 // app.use('/auth', authRouter)
 
 app.listen(PORT, () => {

@@ -14,7 +14,7 @@ const bookingSchema = new Schema({
     location: String
 })
 
-const itemSchema = new Schema({
+const eventSchema = new Schema({
     title: {
         type: String,
         unique: true,
@@ -32,6 +32,6 @@ const itemSchema = new Schema({
     bookings: [bookingSchema]
 })
 
-const Item = mongoose.model('item', itemSchema)
+const Event = mongoose.model('event', eventSchema)
 
-module.exports = Item
+module.exports = Event

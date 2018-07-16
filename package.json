@@ -6,7 +6,7 @@
   "scripts": {
     "now start": "node index.js",
     "start": "node index.js",
-    "seed": "node ./items/itemsSeed.js",
+    "seed": "node ./events/eventsSeed.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
