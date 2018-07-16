@@ -1,6 +1,6 @@
-const Item = require('./item')
+const Event = require('./event')
 
-const items = [
+const events = [
     {
         title: 'Unity Gamemaker for Kids',
         facilitators: 'Tyson Butler-Boschma (Ph. 0448639179)',
@@ -80,8 +80,8 @@ const items = [
     }
 ]
 
-Item.create(items)
+Event.create(events)
     .then(() => {
-        console.info(`seeded items`)
+        console.info(`seeded events`)
 
     })
