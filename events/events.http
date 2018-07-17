@@ -20,11 +20,11 @@ GET http://localhost:3000/events
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/events/5b4bf3f650c8340440a587bd
+PATCH http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c
 Content-Type: application/json
 
 {
-    "title": "AAAAAAAAA",
+    "title": "FFFFF",
     "facilitators": "AAAAAAAAA Tyson Butler-Boschma ",
     "attendees": 10,
     "status": "AAPending",
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/new
+PUT http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c/new
 Content-Type: application/json
 
             {
@@ -50,5 +50,5 @@ PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55
 Content-Type: application/json
 
 ###
-DELETE http://localhost:3000/events/5b4bf460677db10456ab55a7
+DELETE http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c
 Content-Type: application/json

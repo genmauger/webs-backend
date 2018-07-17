@@ -7,6 +7,7 @@ const cors = require('cors')
 const app = express()
 
 const eventRouter = require('./events/eventRouter')
+const organisationRouter = require('./organisations/organisationRouter')
 // const authRouter = require('./auth/authRouter')
 
 const PORT = 3000
@@ -20,7 +21,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.use('/events', eventRouter)
-// app.use('/auth', authRouter)
+app.use('/organisations', organisationRouter)
 
 app.listen(PORT, () => {
     console.info(`server listening on port ${PORT}`)

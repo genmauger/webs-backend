@@ -2,6 +2,7 @@ npm i express --save
 npm add mongoose --save
 npm add cors --save
 npm add -D nodemon
+npm i bcrypt --save
 
 https://webs-backend-zrzkkmdvmx.now.sh
 https://webs-backend-ilrcbrqvqv.now.sh
