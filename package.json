@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "The backend section of our WEBS project",
   "main": "index.js",
+  "now": {
+    "alias": "webs-backend-dev"
+  },
   "scripts": {
     "now start": "node index.js",
     "start": "node index.js",
-    "seed": "node ./organisations/organisationsSeed.js",
+    "seed": "node ./notifications/notificationsSeed.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
