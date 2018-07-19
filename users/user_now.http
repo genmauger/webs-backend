@@ -1,0 +1,40 @@
+
+
+###
+GET https://webs-backend-dev.now.sh/users
+Content-Type: application/json
+
+###
+PATCH https://webs-backend-dev.now.sh/events/5b4d3ec0a6d4fc0052b24fc5
+Content-Type: application/json
+
+{
+    "title": "FFFFF 1",
+    "facilitators": "FFFFF Tyson Butler-Boschma ",
+    "attendees": 10,
+    "status": "FFFFF Pending",
+    "creator": "FFFFF",
+    "notes": "FFFFF DATA",
+    "onsite": false,
+    "price": 555000,
+    "organisation": "CA Mel FFFFF"
+}
+
+
+###
+PUT https://webs-backend-dev.now.sh/events/5b4d3ec0a6d4fc0052b24fc5/new
+Content-Type: application/json
+
+            {
+                "start": "12/11/2018 10:00",
+                "end": "12/11/2018 13:00",
+                "location": "Room 1212"
+            }
+
+###
+PUT https://webs-backend-dev.now.sh/events/5b4d3ec0a6d4fc0052b24fc5/5b4d3f18a6d4fc0052b24fc7/remove
+Content-Type: application/json
+
+###
+DELETE https://webs-backend-dev.now.sh/events/5b4d3ec0a6d4fc0052b24fc5
+Content-Type: application/json

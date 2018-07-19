@@ -6,7 +6,6 @@ const skillSchema = new Schema({
 
     skill: {
         type: String,
-        unique: true,
         required: true
     }
 })
@@ -27,11 +26,13 @@ const userSchema = new Schema({
     l_name: String,
     contact_no: String,
     default_location: String,
-    availability: boolean,
-    longitude: Double,
-    Latitude: Double,
+    availability: Boolean,
+    longitude: Number,
+    Latitude: Number,
     skills: [skillSchema]
 })
+
+
 
 userSchema.statics.isAuthenticUser = async function(email, password) {
     
@@ -62,6 +63,6 @@ try {
 }
 }
 
-const User = mongoose.model('Users', eventSchema)
+const User = mongoose.model('Users', userSchema)
 
 module.exports = User
