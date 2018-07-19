@@ -9,7 +9,7 @@
   "scripts": {
     "now start": "node index.js",
     "start": "node index.js",
-    "seed": "node ./notifications/notificationsSeed.js",
+    "seed": "node ./xxxx/xxxx Seed.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
