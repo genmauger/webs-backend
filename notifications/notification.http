@@ -2,13 +2,13 @@
 POST http://localhost:3000/notifications/new
 Content-Type: application/json
 
-{
-    "message": "This is a test message",
-    "recipient": "Gretcher",
-    "time": "12/23/2018 10:00",
-    "unread": true
-}
+    {
+        "message": "New test message",
+        "recipient": "user@gmail.com",
+        "time": "08/04/2018 12:00",
+        "unread": false
+    }
 
 ###
-# GET http://localhost:3000/notifications
-# Content-Type: application/json
+GET http://localhost:3000/notifications
+Content-Type: application/json
