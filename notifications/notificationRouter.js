@@ -2,7 +2,7 @@ const express = require('express')
 const Notification = require('./notification')
 const router = express.Router()
 
-
+// Show all
 router.get('/', (req, res) => {
     Notification.find()
         .then(notifications => {
@@ -12,5 +12,10 @@ router.get('/', (req, res) => {
             res.status(500).json({ error: err.message })
         })
 })
+
+// Create new notification
+
+
+// Show one
 
 module.exports = router
