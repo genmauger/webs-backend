@@ -27,5 +27,27 @@ router.post('/new', (req, res) => {
 })
 
 // Show one
+router.post('/:id', (req, res) => {
+    const id = req.params.id
+    Notification.findById({_id: id})
+    .then(notification => {
+        res.status(200).json(notification)
+    })
+    .catch(err => {
+        res.status(500).json({ error: err.message })
+    })
+})
+
+// Update 
+router.patch("/:id", (req, res, next) => {
+    // const id = req.params.productId;
+    const id = req.params.id
+    
+    Notification.findByIdAndUpdate({ _id: id },  req.body, {new: true}, function(err, notification) {
+        if (err) return res.status(500).send(err);
+        return res.json(notification);
+    });
+  });
+
 
 module.exports = router

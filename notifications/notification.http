@@ -3,12 +3,27 @@ POST http://localhost:3000/notifications/new
 Content-Type: application/json
 
     {
-        "message": "New test message",
+        "message": "XXX02",
         "recipient": "user@gmail.com",
         "time": "08/04/2018 12:00",
         "unread": false
     }
 
 ###
-GET http://localhost:3000/notifications
+GET http://localhost:3000/notifications/
 Content-Type: application/json
+
+###
+GET http://localhost:3000/notifications/5b5172ddf6083044a1f06ebf
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/notifications/5b518f2c86236a473687ed16
+Content-Type: 
+
+    {
+        "message": "XXX02",
+        "recipient": "user@gmail.com",
+        "time": "08/04/2018 12:10",
+        "unread": false
+    }
