@@ -14,7 +14,8 @@ router.get('/', (req, res) => {
 })
 
 // Create new notification
-router.get('/new', (req, res) => {
+router.post('/new', (req, res) => {
+
     const notification = new Notification(req.body)
     notification.save()
         .then(() => {
