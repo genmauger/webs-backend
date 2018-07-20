@@ -3,24 +3,28 @@ POST http://localhost:3000/organisations/new
 Content-Type: application/json
 
 {
-  "org_name": "XXXX1 XX5",
-  "contact_name": "Samara Jesney",
-  "contact_no": "0000 0000 000",
-  "contact_email": "S.J@coderacademy.com",
-  "locations": []
+"org_name":  "ASDFASFS",
+"contact_name": "Samara Jesney",
+"contact_no": "0000 0000 000",
+"contact_email": "S.J@coderacademy.com",
+"locations": []
 }
 
 ###
-GET http://localhost:3000/organisations
+GET http://localhost:3000/organisations/
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/organisations
+PATCH http://localhost:3000/organisations/5b5196e9252faa0bbb45709b
 Content-Type: application/json
 
 {
-  "org_name": "Coder Academy",
-  "contact_name": "Matt McKenzie",
-  "contact_no": "0101 1010 0101",
-  "contact_email": "m.m@coderacademy.com",
+"org_name": "5b51944c9b110f035b68fe38",
+"contact_name": "Matt McKenzie McKenzie",
+"contact_no": "0101 232424 0101",
+"contact_email": "m.m@coderacademy.com"
 }
+
+###s
+DELETE http://localhost:3000/organisations/5b518fddfdc7550b2ebb3665
+Content-Type: application/json
