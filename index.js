@@ -17,22 +17,22 @@ app.use(bodyParser.json())
 // app.use(cookieParser())
 
 
-var whitelist = ['https://redhillwebs.com.au', 'http://localhost:3000', 'http://localhost:3001']
-var corsOptions = {
-    credentials: true,
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
-}
-
-// const corsOptions = {
-//     origin: 'http://localhost:3001',
-//     credentials: true
+// var whitelist = ['https://redhillwebs.com.au', 'http://localhost:3000', 'http://localhost:3001']
+// var corsOptions = {
+//     credentials: true,
+//     origin: function (origin, callback) {
+//         if (whitelist.indexOf(origin) !== -1) {
+//             callback(null, true)
+//         } else {
+//             callback(new Error('Not allowed by CORS'))
+//         }
+//     }
 // }
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    credentials: true
+}
 
 app.use(cors(corsOptions))
 
@@ -42,5 +42,5 @@ app.use('/notifications', notificationRouter)
 app.use('/users', userRouter)
 
 app.listen(PORT, () => {
-    console.info(`server listening on port ${PORT}`)
+    console.info(`server listening on port ${PORT} - ${process.env.MONGO_URI}`)
 })
