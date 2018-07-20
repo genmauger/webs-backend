@@ -14,7 +14,16 @@ router.get('/', (req, res) => {
 })
 
 // Create new notification
-
+router.get('/new', (req, res) => {
+    const notification = new Notification(req.body)
+    notification.save()
+        .then(() => {
+            res.status(201).json(notification)
+        })
+        .catch(err => {
+            res.status(500).json({ err: err.message })
+        })
+})
 
 // Show one
 
