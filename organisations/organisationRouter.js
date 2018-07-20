@@ -16,10 +16,22 @@ router.get('/', (req, res) => {
 router.patch("/:id", (req, res, next) => {
   const id = req.params.id
 
-  Organisation.findByIdAndUpdate({_id: id}, req.body,{new: true}, function(err, event){
+  Organisation.findByIdAndUpdate({_id: id}, req.body,{new: true}, function(err, organisation){
     if(err) return res.status(500).send(err);
-    return res.body.json(Organisation);
+    return res.body.json(organisation);
   })
+})
+
+router.post ('/new', (req, res) => {
+
+  const event = new Organisation(req.body)
+  event.save()
+       .then(() => {
+            res.status(201).json(organisation)
+       })
+       .catch(err => {
+         res.status(500).json({err: err.message})
+       })
 })
 
 module.exports = router
