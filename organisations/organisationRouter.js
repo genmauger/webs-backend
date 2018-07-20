@@ -13,4 +13,13 @@ router.get('/', (req, res) => {
         })
 })
 
+router.patch("/:id", (req, res, next) => {
+  const id = req.params.id
+
+  Organisation.findByIdAndUpdate({_id: id}, req.body,{new: true}, function(err, event){
+    if(err) return res.status(500).send(err);
+    return res.body.json(Organisation);
+  })
+})
+
 module.exports = router
