@@ -3,8 +3,8 @@ POST http://localhost:3000/organisations/new
 Content-Type: application/json
 
 {
-"org_name":  "ASDFASFS",
-"contact_name": "Samara Jesney",
+"org_name":  "tryout",
+"contact_name": "Thomas the tank engine",
 "contact_no": "0000 0000 000",
 "contact_email": "S.J@coderacademy.com",
 "locations": []
@@ -15,16 +15,30 @@ GET http://localhost:3000/organisations/
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/organisations/5b5196e9252faa0bbb45709b
+PATCH http://localhost:3000/organisations/5b51a60a7ff1ea0ce4c14c61
 Content-Type: application/json
 
 {
-"org_name": "5b51944c9b110f035b68fe38",
+"org_name": "5b51a60a7ff1ea0ce4c14c61",
 "contact_name": "Matt McKenzie McKenzie",
 "contact_no": "0101 232424 0101",
 "contact_email": "m.m@coderacademy.com"
 }
 
+###
+PATCH http://localhost:3000/organisations/5b518566ece9360a6c383f81/new
+Content-Type: application/json
+
+ {
+   "street_address": "7 atom Street",
+   "suburb": "Double Helix",
+   "state": "The milkey Way",
+   "pcode": "9999",
+   "longitude": "off the charts",
+   "latitude": "out of this world",
+   "rooms": []
+ }
+
 ###s
-DELETE http://localhost:3000/organisations/5b518fddfdc7550b2ebb3665
+DELETE http://localhost:3000/organisations/5b51a60a7ff1ea0ce4c14c61
 Content-Type: application/json
