@@ -1,19 +1,16 @@
 {
   "name": "webs-backend",
   "version": "1.0.0",
-  "description": "The backend section of our WEBS project",
+  "description": "The backend section of WEBS project",
   "main": "index.js",
-  "now": {
-    "alias": "webs-backend-dev"
-  },
   "scripts": {
     "now start": "node index.js",
     "start": "node index.js",
-    "seed": "node ./xxxx/xxxx Seed.js",
+    "seed": "node ./events/eventsSeed.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
-  "author": "",
+  "author": "Sveto, Gen, Steven, Cameo",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.0",

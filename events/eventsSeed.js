@@ -1,9 +1,11 @@
 const Event = require('./event')
 
+
 const events = [
     {
         title: 'Unity Gamemaker for Kids',
-        facilitators: 'Tyson Butler-Boschma (Ph. 0448639179)',
+        facilitatorss: 'Tyson Butler-Boschma (Ph. 0448639179)',
+        facilitators: '5b502d77b043e3052a687882',
         attendees: 0,
         status: 'Confirmed',
         creator: null,
@@ -32,7 +34,8 @@ const events = [
     },
     {
         title: 'Hands-on Coding for Intermediate',
-        facilitators: 'Simon Dwyer',
+        facilitatorss: 'Simon Dwyer',
+        facilitators: '5b502d77b043e3052a687882',
         attendees: 20,
         status: 'Confirmed',
         creator: null,
@@ -56,7 +59,8 @@ const events = [
     },
     {
         title: 'Hands-on Coding for Beginners',
-        facilitators: 'Simon Dwyer',
+        facilitatorss: 'Simon Dwyer',
+        facilitators: '5b502d77b043e3052a687882',
         attendees: 20,
         status: 'Pending',
         creator: null,
