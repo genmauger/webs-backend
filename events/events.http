@@ -1,0 +1,54 @@
+###
+POST http://localhost:3000/events/new
+Content-Type: application/json
+
+{
+    "title": "XXXXX",
+    "facilitators": "Tyson Butler-Boschma ",
+    "attendees": 0,
+    "status": "Pending",
+    "creator": null,
+    "notes": "XXXXX DATA",
+    "onsite": true,
+    "price": 55000,
+    "organisation": "CA Mel",
+    "bookings": []
+}
+
+###
+GET http://localhost:3000/events
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c
+Content-Type: application/json
+
+{
+    "title": "FFFFF",
+    "facilitators": "AAAAAAAAA Tyson Butler-Boschma ",
+    "attendees": 10,
+    "status": "AAPending",
+    "creator": "AAAAAAAAA",
+    "notes": "AAAAAAAAA DATA",
+    "onsite": false,
+    "price": 555000,
+    "organisation": "CA Mel AAAA"
+}
+
+###
+PUT http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c/new
+Content-Type: application/json
+
+            {
+                "start": "12/23/2018 10:00",
+                "end": "12/23/2018 13:00",
+                "location": "Room 1212"
+            }
+
+###
+PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55aa/remove
+Content-Type: application/json
+
+###
+DELETE http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c
+Content-Type: application/json

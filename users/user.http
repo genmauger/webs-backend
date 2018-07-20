@@ -1,0 +1,59 @@
+###
+POST http://localhost:3000/users/new
+Content-Type: application/json
+
+{
+        "email": "testadmin@gmail.com",
+        "password": "",
+        "role": "facilitator",
+        "f_name": "Sveto",
+        "l_name": "Stojcevic",
+        "contact_no": "0466 558 570",
+        "default_location": "120 Spenser",
+        "availability": true,
+        "longitude": 0,
+        "Latitude": 0,
+        "skills": []
+    }
+
+###
+GET http://localhost:3000/users
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/users/5b5014a1ed73d1047d79129c
+Content-Type: application/json
+
+{
+        "email": "testadmin@gmail.com",
+        "password": "",
+        "role": "facilitator",
+        "f_name": "Sveto",
+        "l_name": "Stojcevic",
+        "contact_no": "0466 558 570",
+        "default_location": "120 Spenser St",
+        "availability": true,
+        "longitude": 0,
+        "Latitude": 0,
+        "skills": []
+}
+
+###
+DELETE http://localhost:3000/users/5b5014a1ed73d1047d79129c
+Content-Type: application/json
+
+
+###
+PUT http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c/new
+Content-Type: application/json
+
+            {
+                "start": "12/23/2018 10:00",
+                "end": "12/23/2018 13:00",
+                "location": "Room 1212"
+            }
+
+###
+PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55aa/remove
+Content-Type: application/json
+
