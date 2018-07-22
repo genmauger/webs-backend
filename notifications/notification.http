@@ -14,12 +14,12 @@ GET http://localhost:3000/notifications/
 Content-Type: application/json
 
 ###
-GET http://localhost:3000/notifications/5b5172ddf6083044a1f06ebf
+GET http://localhost:3000/notifications/5b51844a6601e3458483f8f3
 Content-Type: application/json
 
 ###
 PATCH http://localhost:3000/notifications/5b518f2c86236a473687ed16
-Content-Type: 
+Content-Type: application/json
 
     {
         "message": "XXX02",
