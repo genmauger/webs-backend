@@ -1,3 +1,5 @@
-production.env
+productive.env
 .env
+*.env
+aaacmd
 node_modules
