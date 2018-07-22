@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/organisations/
+GET http://localhost:3000/organisations/5b518566ece9360a6c383f81
 Content-Type: application/json
 
 ###
@@ -36,6 +36,14 @@ Content-Type: application/json
    "pcode": "9999",
    "longitude": "off the charts",
    "latitude": "out of this world"
+ }
+
+###
+PUT  http://localhost:3000/organisations/5b518566ece9360a6c383f81/new
+Content-Type: application/json
+
+ {
+   "room": "room 5",
  }
 
 ###s
