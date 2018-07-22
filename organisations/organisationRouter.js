@@ -10,6 +10,25 @@ router.get('/', (req, res) => {
   })
   .catch(err => {
     res.status(500).json({ error: err.message })
+  });
+
+  router.get('/:id', (req, res) => {
+    const id = req.params.id
+    Organisation.findById(id, 
+    function(err, organisation) {
+      if (err) return res.status(500).send(err);
+      return res.json(organisation);
+    }
+  )})
+});
+
+router.patch('/:id', (req, res, next) => {
+  // const id = req.params.productId;
+  const id = req.params.id
+  
+  Organisation.findByIdAndUpdate({ _id: id },  req.body, {new: true}, function(err, organisation) {
+      if (err) return res.status(500).send(err);
+      return res.json(organisation);
   })
 });
 
@@ -24,23 +43,14 @@ router.post('/new', (req, res) => {
      })
 });
 
-router.get('/:id', (req, res) => {
-  const id = req.params.id
-  Organisation.findById(id, 
-  function(err, organisation) {
-    if (err) return res.status(500).send(err);
-    return res.json(organisation);
-  }
-)})
-
-router.put('/:id/:id_sub/new', function (req, res) {
-  const id = req.params.id
-  Organisation.findOne({ _id: id }), function (err, organisation) {
-    if(err) return res.status(500).send(err);
-    organisation.save()
-    return res.json(organisation)
-  }
-})
+  router.put('/:id/new', function (req, res) {
+    const id = req.params.id
+    Organisation.findOne({ _id: id }), function (err, organisation) {
+      if(err) return res.status(500).send(err);
+      organisation.save()
+      return res.json(organisation)
+    }
+  })
 
 
 
@@ -57,15 +67,6 @@ router.delete('/:id', (req, res) => {
  })
 });
 
-router.patch('/:id', (req, res, next) => {
- // const id = req.params.productId;
- const id = req.params.id
- 
- Organisation.findByIdAndUpdate({ _id: id },  req.body, {new: true}, function(err, organisation) {
-     if (err) return res.status(500).send(err);
-     return res.json(organisation);
- })
-});
 
 
 

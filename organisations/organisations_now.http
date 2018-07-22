@@ -15,18 +15,18 @@ GET http://localhost:3000/organisations/
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/organisations/5b51a60a7ff1ea0ce4c14c61
+PATCH http://localhost:3000/organisations/5b518566ece9360a6c383f81
 Content-Type: application/json
 
 {
-"org_name": "5b51a60a7ff1ea0ce4c14c61",
-"contact_name": "Matt McKenzie McKenzie",
-"contact_no": "0101 232424 0101",
-"contact_email": "m.m@coderacademy.com"
+"org_name": "5b51a60a7ff1ea0cthewuew1",
+"contact_name": "John bartolow",
+"contact_no": "010109090900101",
+"contact_email": "j.b@coderacademy.com"
 }
 
 ###
-PATCH http://localhost:3000/organisations/5b518566ece9360a6c383f81/new
+PUT  http://localhost:3000/organisations/5b518566ece9360a6c383f81/new
 Content-Type: application/json
 
  {
@@ -35,8 +35,7 @@ Content-Type: application/json
    "state": "The milkey Way",
    "pcode": "9999",
    "longitude": "off the charts",
-   "latitude": "out of this world",
-   "rooms": []
+   "latitude": "out of this world"
  }
 
 ###s
