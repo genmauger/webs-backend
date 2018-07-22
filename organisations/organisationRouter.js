@@ -43,16 +43,32 @@ router.post('/new', (req, res) => {
      })
 });
 
-  router.put('/:id/new', function (req, res) {
+
+  router.put('/:id/new', function (req, res, next) {
     const id = req.params.id
-    Organisation.findOne({ _id: id }), function (err, organisation) {
-      if(err) return res.status(500).send(err);
-      organisation.save()
+    Organisation.findOne({ _id: id }, function (err, organisation) {
+        if (err) return next(err);
+ 
+        organisation.locations.push(req.body)
+ 
+        organisation.save()
+        return res.json(organisation)
+    })
+ 
+ });
+
+
+ router.put('/:id/new', function (req, res, next) {
+  const id = req.params.id
+  Organisation.findOne({ _id: id }, function (err, organisation) {
+      if (err) return next(err);
+        organisation.locations.rooms.push(req.body)
+          organisation.save()
+          
       return res.json(organisation)
-    }
   })
 
-
+});
 
 router.delete('/:id', (req, res) => {
  const id = req.params.id
