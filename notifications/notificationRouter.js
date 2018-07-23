@@ -2,7 +2,11 @@ const express = require('express')
 const Notification = require('./notification')
 const router = express.Router()
 
+<<<<<<< HEAD
 // Show all
+=======
+
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
 router.get('/', (req, res) => {
     Notification.find()
         .then(notifications => {
@@ -13,6 +17,7 @@ router.get('/', (req, res) => {
         })
 })
 
+<<<<<<< HEAD
 // Show one
 router.get('/:id', (req, res) => {
     const id = req.params.id
@@ -50,4 +55,6 @@ router.patch("/:id", (req, res, next) => {
   });
 
 
+=======
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
 module.exports = router

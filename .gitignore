@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 productive.env
 .env
 *.env
 aaacmd
 node_modules
+=======
+production.env
+aaacmd
+.env
+node_modules
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294

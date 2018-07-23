@@ -14,6 +14,10 @@ const userRouter = require('./users/userRouter')
 
 const PORT = 3000
 app.use(bodyParser.json())
+<<<<<<< HEAD
+=======
+// app.use(cookieParser())
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
 
 
 // var whitelist = ['https://redhillwebs.com.au', 'http://localhost:3000', 'http://localhost:3001']
@@ -29,7 +33,11 @@ app.use(bodyParser.json())
 // }
 
 const corsOptions = {
+<<<<<<< HEAD
     origin: '*',
+=======
+    origin: 'http://localhost:3000',
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
     credentials: true
 }
 

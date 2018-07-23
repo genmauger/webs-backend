@@ -3,7 +3,11 @@ POST http://localhost:3000/events/new
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "title": "XXXXX",
+=======
+    "title": "XX111",
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
     "facilitators": "Tyson Butler-Boschma ",
     "attendees": 0,
     "status": "Pending",
@@ -16,11 +20,19 @@ Content-Type: application/json
 }
 
 ###
+<<<<<<< HEAD
 GET http://localhost:3000/events
 Content-Type: application/json
 
 ###
 PATCH http://localhost:3000/events/5b51a80ecca4f30f331bdd39
+=======
+GET http://localhost:3000/events/
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/events/5b517c2dd2d9d907a9bbf576
+>>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
 Content-Type: application/json
 
 {
