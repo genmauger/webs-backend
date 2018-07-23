@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-// const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
 const cors = require('cors')
 
 
@@ -10,6 +10,7 @@ const eventRouter = require('./events/eventRouter')
 const organisationRouter = require('./organisations/organisationRouter')
 const notificationRouter = require('./notifications/notificationRouter')
 const userRouter = require('./users/userRouter')
+const authRouter = require('./auth/authRouter')
 // const authRouter = require('./auth/authRouter')
 
 const PORT = 3000
@@ -35,11 +36,12 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
-
+app.use(cookieParser())
 app.use('/events', eventRouter)
 app.use('/organisations', organisationRouter)
 app.use('/notifications', notificationRouter)
 app.use('/users', userRouter)
+app.use('/auth', authRouter)
 
 app.listen(PORT, () => {
     console.info(`server listening on port ${PORT} - ${process.env.MONGO_URI}`)

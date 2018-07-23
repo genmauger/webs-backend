@@ -1,0 +1,28 @@
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json 
+
+{
+  "email": "samara.jesney@gmail.com",
+  "password": "1234567"
+}
+
+
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+     "email": "test@gmail.com",
+        "password": "1234567",
+        "role": "facilitator",
+        "f_name": "Joel",
+        "l_name": "Simons",
+        "contact_no": "0466 558 570",
+        "default_location": "120 Spenser",
+        "availability": true,
+        "longitude": 0,
+        "Latitude": 0
+}
+

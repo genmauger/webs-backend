@@ -3,8 +3,8 @@ POST http://localhost:3000/users/new
 Content-Type: application/json
 
 {
-        "email": "testadmin@gmail.com",
-        "password": "",
+        "email": "samara.jesney@gmail.com",
+        "password": "1234567",
         "role": "facilitator",
         "f_name": "Sveto",
         "l_name": "Stojcevic",
