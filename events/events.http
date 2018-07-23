@@ -20,7 +20,7 @@ GET http://localhost:3000/events
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c
+PATCH http://localhost:3000/events/5b51a80ecca4f30f331bdd39
 Content-Type: application/json
 
 {
