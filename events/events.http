@@ -46,6 +46,22 @@ Content-Type: application/json
             }
 
 ###
+PUT http://localhost:3000/events/5b51e939f6357702fa1bfb29/facnew
+Content-Type: application/json
+
+            {
+                "id": "xxxb502d77b043e3052a687881",
+                "status": "pending"
+            }
+
+
+###
+PUT http://localhost:3000/events/5b51e939f6357702fa1bfb29/5b51eb60e6ffe80332afeb54/facremove
+Content-Type: application/json
+
+
+
+###
 PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55aa/remove
 Content-Type: application/json
 

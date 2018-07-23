@@ -11,6 +11,7 @@ const organisationRouter = require('./organisations/organisationRouter')
 const notificationRouter = require('./notifications/notificationRouter')
 const userRouter = require('./users/userRouter')
 const authRouter = require('./auth/authRouter')
+const workshopRouter = require('./workshops/workshopRouter')
 // const authRouter = require('./auth/authRouter')
 
 const PORT = 3000
@@ -28,10 +29,10 @@ app.use(bodyParser.json())
 //             callback(new Error('Not allowed by CORS'))
 //         }
 //     }
-// }
+// }  http://localhost:3000
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true
 }
 
@@ -42,6 +43,7 @@ app.use('/organisations', organisationRouter)
 app.use('/notifications', notificationRouter)
 app.use('/users', userRouter)
 app.use('/auth', authRouter)
+app.use('/workshops', workshopRouter)
 
 app.listen(PORT, () => {
     console.info(`server listening on port ${PORT} - ${process.env.MONGO_URI}`)

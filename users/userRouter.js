@@ -13,6 +13,17 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/:id', (req, res) => {
+    const id = req.params.id
+    User.findOne({_id: id})
+        .then(user => {
+            res.status(200).json(user)
+        })
+        .catch(err => {
+            res.status(500).json({ error: err.message })
+        })
+})
+
 router.get('/:email', (req, res) => {
     const email = req.params.email
     User.findOne({email: email})
