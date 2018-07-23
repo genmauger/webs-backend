@@ -26,10 +26,6 @@ const organisationsSchema = new Schema({
     contact_name: String,
     contact_no: String,
     contact_email: String,
-<<<<<<< HEAD
-    contact_no: String,
-=======
->>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
     locations: [locationSchema]
 })
 

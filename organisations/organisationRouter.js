@@ -4,16 +4,6 @@ const router = express.Router()
 
 
 router.get('/', (req, res) => {
-<<<<<<< HEAD
-    Organisation.find()
-        .then(organisations => {
-            res.status(200).json(organisations)
-        })
-        .catch(err => {
-            res.status(500).json({ error: err.message })
-        })
-})
-=======
   Organisation.find()
   .then(organisations => {
     res.status(200).json(organisations)
@@ -95,6 +85,5 @@ router.delete('/:id', (req, res) => {
 
 
 
->>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
 
 module.exports = router

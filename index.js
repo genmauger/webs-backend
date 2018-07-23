@@ -10,14 +10,12 @@ const eventRouter = require('./events/eventRouter')
 const organisationRouter = require('./organisations/organisationRouter')
 const notificationRouter = require('./notifications/notificationRouter')
 const userRouter = require('./users/userRouter')
+const workshopRouter = require('./workshops/workshopRouter')
 // const authRouter = require('./auth/authRouter')
 
 const PORT = 3000
 app.use(bodyParser.json())
-<<<<<<< HEAD
-=======
 // app.use(cookieParser())
->>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
 
 
 // var whitelist = ['https://redhillwebs.com.au', 'http://localhost:3000', 'http://localhost:3001']
@@ -33,11 +31,7 @@ app.use(bodyParser.json())
 // }
 
 const corsOptions = {
-<<<<<<< HEAD
     origin: '*',
-=======
-    origin: 'http://localhost:3000',
->>>>>>> 8b4345af35979bc3e297103b9d61b78c5d4a0294
     credentials: true
 }
 
@@ -47,6 +41,7 @@ app.use('/events', eventRouter)
 app.use('/organisations', organisationRouter)
 app.use('/notifications', notificationRouter)
 app.use('/users', userRouter)
+app.use('/workshops', workshopRouter)
 
 app.listen(PORT, () => {
     console.info(`server listening on port ${PORT} - ${process.env.MONGO_URI}`)
