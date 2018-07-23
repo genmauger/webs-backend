@@ -26,6 +26,17 @@ Content-Type: application/json
 
 ###
 PATCH http://localhost:3000/users/5b5187f28a45e80493cb5041
+
+        "skills": []
+    }
+
+###
+GET http://localhost:3000/users/
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/users/5b5014a1ed73d1047d79129c
+>>>>>>> 89194ef44fcbab40956cd92e7e43be10ae5529cf
 Content-Type: application/json
 
 {

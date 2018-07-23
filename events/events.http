@@ -3,7 +3,9 @@ POST http://localhost:3000/events/new
 Content-Type: application/json
 
 {
+
     "title": "XXXXX",
+
     "facilitators": "Tyson Butler-Boschma ",
     "attendees": 0,
     "status": "Pending",
@@ -54,7 +56,6 @@ Content-Type: application/json
                 "status": "pending"
             }
 
-            5b51e939f6357702fa1bfb29
 
 ###
 PUT http://localhost:3000/events/5b51e939f6357702fa1bfb29/5b51eb60e6ffe80332afeb54/facremove

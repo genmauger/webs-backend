@@ -1,0 +1,28 @@
+GET http://localhost:3000/workshops
+Content-Type: application/json
+
+###
+POST http://localhost:3000/workshops/new
+Content-Type: application/json
+
+{
+    "workshop_name": "Coding and Robotics for Kids",
+    "skills_required": ["Coding", "Other Things"]
+}
+
+###
+GET http://localhost:3000/workshops/5b518566ece9360a6c383f81
+Content-Type: application/json
+
+###
+PUT  http://localhost:3000/workshops/5b518566ece9360a6c383f81
+Content-Type: application/json
+
+{
+    "workshop_name": "Coding and Robotics for Kids",
+    "skills_required": ["Coding", "Other Things"]
+}
+
+###s
+DELETE http://localhost:3000/workshops/5b51a60a7ff1ea0ce4c14c61
+Content-Type: application/json

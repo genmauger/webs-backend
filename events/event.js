@@ -1,6 +1,7 @@
 const mongoose = require('../db/connectdb')
 const { Schema } = mongoose
 const User = require('../users/user')
+
 const bookingSchema = new Schema({
 
     start: {
