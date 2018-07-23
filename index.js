@@ -16,10 +16,6 @@ const workshopRouter = require('./workshops/workshopRouter')
 
 const PORT = 3000
 app.use(bodyParser.json())
-<<<<<<< HEAD
-=======
-// app.use(cookieParser())
->>>>>>> 9040ff933647a863866bb1fcce12ca49b803b30e
 
 
 // var whitelist = ['https://redhillwebs.com.au', 'http://localhost:3000', 'http://localhost:3001']

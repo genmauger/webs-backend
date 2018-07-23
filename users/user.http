@@ -3,7 +3,7 @@ POST https://webs-backend-dev.now.sh/users/new
 Content-Type: application/json
 
 {
-        "email": "samara.jesney@gmail.com",
+        "email": "hotmail@gmail.com",
         "password": "1234567",
         "role": "facilitator",
         "f_name": "Sveto",
