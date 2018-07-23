@@ -5,7 +5,6 @@ const mongoose = require('mongoose')
 //  useNewUrlParser: true, promiseLibrary: global.Promise
 const url = process.env.MONGO_URI
 const options = {
-   
     user: process.env.MONGO_USER,
     pass: process.env.MONGO_PASS,
     dbName: process.env.MONGO_DBNAME,

@@ -3,7 +3,7 @@ POST http://localhost:3000/notifications/new
 Content-Type: application/json
 
     {
-        "message": "XXX02",
+        "message": "XXX03",
         "recipient": "user@gmail.com",
         "time": "08/04/2018 12:00",
         "unread": false

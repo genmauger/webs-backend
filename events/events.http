@@ -3,7 +3,7 @@ POST http://localhost:3000/events/new
 Content-Type: application/json
 
 {
-    "title": "XXXXX",
+    "title": "XX111",
     "facilitators": "Tyson Butler-Boschma ",
     "attendees": 0,
     "status": "Pending",
@@ -16,11 +16,11 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/events
+GET http://localhost:3000/events/
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c
+PATCH http://localhost:3000/events/5b517c2dd2d9d907a9bbf576
 Content-Type: application/json
 
 {
@@ -44,6 +44,22 @@ Content-Type: application/json
                 "end": "12/23/2018 13:00",
                 "location": "Room 1212"
             }
+
+###
+PUT http://localhost:3000/events/5b51e939f6357702fa1bfb29/facnew
+Content-Type: application/json
+
+            {
+                "id": "xxxb502d77b043e3052a687881",
+                "status": "pending"
+            }
+
+
+###
+PUT http://localhost:3000/events/5b51e939f6357702fa1bfb29/5b51eb60e6ffe80332afeb54/facremove
+Content-Type: application/json
+
+
 
 ###
 PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55aa/remove

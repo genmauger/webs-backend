@@ -1,10 +1,10 @@
 ###
-POST http://localhost:3000/users/new
+POST https://webs-backend-dev.now.sh/users/new
 Content-Type: application/json
 
 {
-        "email": "testadmin@gmail.com",
-        "password": "",
+        "email": "samara.jesney@gmail.com",
+        "password": "1234567",
         "role": "facilitator",
         "f_name": "Sveto",
         "l_name": "Stojcevic",
@@ -13,6 +13,20 @@ Content-Type: application/json
         "availability": true,
         "longitude": 0,
         "Latitude": 0,
+        "skills": [
+            {"skill": "Ruby on Rails"},
+            {"skill": "JavaScript"},
+            {"skill": "VBA"}
+        ]
+    }
+
+###
+GET http://localhost:3000/users/
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/users/5b5187f28a45e80493cb5041
+
         "skills": []
     }
 
@@ -22,6 +36,7 @@ Content-Type: application/json
 
 ###
 PATCH http://localhost:3000/users/5b5014a1ed73d1047d79129c
+>>>>>>> 89194ef44fcbab40956cd92e7e43be10ae5529cf
 Content-Type: application/json
 
 {
@@ -39,7 +54,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/users/5b5014a1ed73d1047d79129c
+DELETE http://localhost:3000/users/5b5187f28a45e80493cb5041
 Content-Type: application/json
 
 

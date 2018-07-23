@@ -11,7 +11,9 @@ router.get('/', (req, res) => {
         .catch(err => {
             res.status(500).json({ error: err.message })
         })
-})
+});
+
+
 
 // Show one
 router.get('/:id', (req, res) => {
@@ -26,6 +28,7 @@ router.get('/:id', (req, res) => {
 })
 
 // Create new notification
+
 router.post('/new', (req, res) => {
 
     const notification = new Notification(req.body)
@@ -36,6 +39,18 @@ router.post('/new', (req, res) => {
         .catch(err => {
             res.status(500).json({ err: err.message })
         })
+});
+
+// Show one
+router.get('/:id', (req, res) => {
+    const id = req.params.id
+    Notification.findById({ _id: id} )
+    .then(notification => {
+        res.status(200).json(notification)
+    })
+    .catch(err => {
+        res.status(500).json({ error: err.message })
+    })
 })
 
 // Update 
