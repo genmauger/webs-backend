@@ -50,6 +50,36 @@ router.put('/:id/new', function (req, res, next) {
 
 });
 
+router.put('/:id/facnew', function (req, res, next) {
+    Event.findOne({ _id: req.params.id }, function (err, event) {
+        if (err) return next(err);
+
+        event.facilitatorObjs.push(req.body)
+
+        event.save()
+        return res.json(event)
+    })
+
+});
+
+router.put('/:id/:id_sub/facremove', function (req, res, next) {
+    Event.findOne({ _id: req.params.id }, function (err, event) {
+        if (err) return next(err);
+
+
+        for (let i = 0; i < event.facilitatorObjs.length; i++) {
+            
+            if (event.facilitatorObjs[i]._id == req.params.id_sub) {
+                var ind = i
+            }
+        }
+        event.facilitatorObjs[ind].remove()
+        event.save()
+        return res.json(event)
+    })
+
+});
+
 router.put('/:id/:id_sub/remove', function (req, res, next) {
     Event.findOne({ _id: req.params.id }, function (err, event) {
         if (err) return next(err);

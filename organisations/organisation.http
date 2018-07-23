@@ -1,0 +1,52 @@
+###
+POST http://localhost:3001/organisations/new
+Content-Type: application/json
+
+{
+"org_name":  "STEVE",
+"contact_name": "Thomas the tank engine",
+"contact_no": "0000 0000 000",
+"contact_email": "S.J@coderacademy.com",
+"locations": []
+}
+
+###
+GET http://localhost:3001/organisations/
+Content-Type: application/json
+
+###
+PATCH http://localhost:3001/organisations/5b5571e8d0c80d062805899f
+Content-Type: application/json
+
+{
+"org_name": "5b51a60a7ff1ea0cthewuew1",
+"contact_name": "John bartolow",
+"contact_no": "010109090900101",
+"contact_email": "j.b@coderacademy.com"
+}
+
+###
+PUT  http://localhost:3001/organisations/5b55724ed0c80d06280589a1/locnew
+Content-Type: application/json
+
+ {
+   "street_add": "333 atom Street",
+   "suburb": "Double Helix",
+   "state": "The milkey Way",
+   "pcode": "9999",
+   "longitude": 0,
+   "latitude": 0,
+   "rooms": []
+ }
+
+###
+PUT  http://localhost:3001/organisations/5b55724ed0c80d06280589a1/5b557263d0c80d06280589a2/roomnew
+Content-Type: application/json
+
+ {
+   "room": "23243 XXXX"
+ }
+
+###s
+DELETE http://localhost:3001/organisations/5b5571e8d0c80d062805899f
+Content-Type: application/json

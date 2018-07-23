@@ -3,6 +3,10 @@ MONGO_USER = ''
 MONGO_PASS = ''
 MONGO_DBNAME = webs_db
 
+https://webs-backend-dev.now.sh
+Cameo - git tag v1.0.0
+git commit .. then git push ... then merge with master on web interface (create pull request)
+
 npm i express --save
 npm add mongoose --save
 npm add cors --save

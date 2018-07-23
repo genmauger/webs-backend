@@ -1,6 +1,6 @@
 const mongoose = require('../db/connectdb')
 const { Schema } = mongoose
-
+const User = require('../users/user')
 const bookingSchema = new Schema({
 
     start: {
@@ -17,11 +17,21 @@ const bookingSchema = new Schema({
 const eventSchema = new Schema({
     title: {
         type: String,
-        unique: true,
         required: true,
         index: true
     },
     facilitators: String,
+    facilitatorObjs: [
+        {
+        
+        id:{
+            type: Schema.Types.ObjectId,
+            required: true,
+            ref: 'User'
+        },
+        status: String
+        }
+    ],
     attendees: Number,
     status: String,
     creator: String,

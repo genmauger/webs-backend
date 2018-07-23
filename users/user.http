@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3000/users/new
+POST https://webs-backend-dev.now.sh/users/new
 Content-Type: application/json
 
 {
@@ -13,7 +13,11 @@ Content-Type: application/json
         "availability": true,
         "longitude": 0,
         "Latitude": 0,
-        "skills": []
+        "skills": [
+            {"skill": "Ruby on Rails"},
+            {"skill": "JavaScript"},
+            {"skill": "VBA"}
+        ]
     }
 
 ###
@@ -21,7 +25,7 @@ GET http://localhost:3000/users
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/users/5b5014a1ed73d1047d79129c
+PATCH http://localhost:3000/users/5b5187f28a45e80493cb5041
 Content-Type: application/json
 
 {
@@ -39,7 +43,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/users/5b5014a1ed73d1047d79129c
+DELETE http://localhost:3000/users/5b5187f28a45e80493cb5041
 Content-Type: application/json
 
 

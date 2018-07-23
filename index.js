@@ -12,7 +12,7 @@ const notificationRouter = require('./notifications/notificationRouter')
 const userRouter = require('./users/userRouter')
 // const authRouter = require('./auth/authRouter')
 
-const PORT = 3000
+const PORT = 3001
 app.use(bodyParser.json())
 // app.use(cookieParser())
 
@@ -27,10 +27,10 @@ app.use(bodyParser.json())
 //             callback(new Error('Not allowed by CORS'))
 //         }
 //     }
-// }
+// }  http://localhost:3000
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true
 }
 
