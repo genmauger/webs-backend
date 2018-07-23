@@ -7,7 +7,25 @@ Content-Type: application/json
   "password": "1234567"
 }
 
+###
+PATCH http://localhost:3000/users/5b5566b001430c08da549bf0
+Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbWFyYS5qZXNuZXlAZ21haWwuY29tIiwiaWF0IjoxNTMyMzIzNTI2fQ.q4L-L8DTyUjJ3yqZCw34UkTda096QBS1bSw2oPH98WY; Path=/; HttpOnly
+Content-Type: application/json
 
+
+{
+   "email": "test@gmail.com",
+        "password": "1234567",
+        "role": "facilitator",
+        "f_name": "Sveto",
+        "l_name": "Stojcevic",
+        "contact_no": "0466 558 570",
+        "default_location": "120 Spenser St",
+        "availability": true,
+        "longitude": 0,
+        "Latitude": 0,
+        "skills": []
+}
 
 ###
 POST http://localhost:3000/auth/register
