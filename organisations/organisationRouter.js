@@ -32,6 +32,7 @@ router.patch('/:id', (req, res, next) => {
   })
 });
 
+
 router.post('/new', (req, res) => {
  const organisation = new Organisation(req.body)
  organisation.save()
