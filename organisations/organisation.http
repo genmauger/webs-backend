@@ -45,15 +45,15 @@ PUT  http://localhost:3001/organisations/5b55724ed0c80d06280589a1/5b557273d0c80d
 Content-Type: application/json
 
 ### add room to location roomnew
-PUT  http://localhost:3001/organisations/5b55724ed0c80d06280589a1/5b567366ecfe7803335cabc7/roomnew
+PUT  http://localhost:3001/organisations/5b5464275a0dff0afc5dcad6/5b54644f5a0dff0afc5dcad7/roomnew
 Content-Type: application/json
 
  {
-   "room": "102 XXXX"
+   "room": "102 234"
  }
 
 ### roomremove
-PUT  http://localhost:3001/organisations/5b55724ed0c80d06280589a1/5b567366ecfe7803335cabc7/5b56739eecfe7803335cabc8/roomremove
+PUT  http://localhost:3001/organisations/5b5464275a0dff0afc5dcad6/5b54644f5a0dff0afc5dcad7/5b54658ff384890b23df9ef0/roomremove
 Content-Type: application/json
 
 ###s
