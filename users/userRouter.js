@@ -57,6 +57,35 @@ router.patch("/:id", (req, res, next) => {
     });
   });
 
+  router.put('/:id/newskill', function (req, res, next) {
+    User.findOne({ _id: req.params.id }, function (err, user) {
+        if (err) return next(err);
+
+        user.skills.push(req.body)
+
+        user.save()
+        return res.json(user)
+    })
+});
+
+router.put('/:id/:id_sub/skillremove', function (req, res, next) {
+    User.findOne({ _id: req.params.id }, function (err, user) {
+        if (err) return next(err);
+
+
+        for (let i = 0; i < user.skills.length; i++) {
+            
+            if (user.skills[i]._id == req.params.id_sub) {
+                var ind = i
+            }
+        }
+        user.skills[ind].remove()
+        user.save()
+        return res.json(user)
+    })
+
+});
+
   router.delete('/:id', (req, res) => {
     const id = req.params.id
     User.findByIdAndRemove(id, function (err, user) {

@@ -13,7 +13,7 @@ const userRouter = require('./users/userRouter')
 const workshopRouter = require('./workshops/workshopRouter')
 // const authRouter = require('./auth/authRouter')
 
-const PORT = 3000
+const PORT = 3001
 app.use(bodyParser.json())
 // app.use(cookieParser())
 
@@ -41,7 +41,7 @@ app.use('/events', eventRouter)
 app.use('/organisations', organisationRouter)
 app.use('/notifications', notificationRouter)
 app.use('/users', userRouter)
-app.use('/workshops', workshopRouter)
+// app.use('/workshops', workshopRouter)
 
 app.listen(PORT, () => {
     console.info(`server listening on port ${PORT} - ${process.env.MONGO_URI}`)

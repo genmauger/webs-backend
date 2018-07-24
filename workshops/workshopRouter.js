@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 })
 
 // GET SINGLE WORKSHOP
-router.got('/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     Workshop.findById(req.params.id, function(err, workshop){
         if(err) return res.status(500).send(err.message)
         return res.json(workshop)
