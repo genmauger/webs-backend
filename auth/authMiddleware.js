@@ -34,7 +34,13 @@ function authenticate(req, res, next) {
 
 function authorize(req, res, next) {
 
-    const token = permit.check(req)
+    console.log('Here We Are, In The Function. 🎉')
+    console.log('Here is the cookie 🍪:' + req.cookies.access_token)
+
+    const token = req.cookies.access_token
+    // const token = permit.check(req)
+    console.log('Here is the token 🎟:' + token)
+
     const jwtSecret = process.env.JWT_SECRET
     JWT.verify(token, jwtSecret, (err, payload) => {
         
