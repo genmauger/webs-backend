@@ -1,9 +1,10 @@
 const express = require('express')
 const Notification = require('./notification')
 const router = express.Router()
+const {authorize} = require('../auth/authMiddleware')
 
 // Show all
-router.get('/', (req, res) => {
+router.get('/', authorize, (req, res) => {
     Notification.find()
         .then(notifications => {
             res.status(200).json(notifications)
@@ -16,7 +17,7 @@ router.get('/', (req, res) => {
 
 
 // Show one
-router.get('/:id', (req, res) => {
+router.get('/:id', authorize, (req, res) => {
     const id = req.params.id
     Notification.findById({ _id: id} )
     .then(notification => {

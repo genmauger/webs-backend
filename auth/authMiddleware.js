@@ -33,8 +33,6 @@ function authenticate(req, res, next) {
 }
 
 function authorize(req, res, next) {
-    // const authHeader = req.get('Authorization')
-    // const [,token] = authHeader.split(' ') //['Bearer', '007']
 
     const token = permit.check(req)
     const jwtSecret = process.env.JWT_SECRET
@@ -52,7 +50,4 @@ function authorize(req, res, next) {
 
         next()
     })
-
-
-   
 }

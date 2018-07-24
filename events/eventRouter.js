@@ -2,7 +2,7 @@ const express = require('express')
 const Event = require('./event')
 const router = express.Router()
 const mongoose = require('mongoose')
-
+const {authorize} = require('../auth/authMiddleware')
 
 router.get('/', authorize, (req, res) => {
     Event.find().populate('title')

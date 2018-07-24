@@ -1,7 +1,7 @@
 const express = require('express')
 const User = require('./user')
 const router = express.Router()
-
+const {authorize} = require('../auth/authMiddleware')
 
 router.get('/', authorize, (req, res) => {
     User.find()

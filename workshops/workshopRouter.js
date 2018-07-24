@@ -1,7 +1,7 @@
 const express = require('express')
 const Workshop = require('./Workshop')
 const router = express.Router()
-
+const {authorize} = require('../auth/authMiddleware')
 
 // GET ALL WORKSHOPS
 router.get('/', authorize, (req, res) => {
