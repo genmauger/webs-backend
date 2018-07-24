@@ -9,9 +9,8 @@ Content-Type: application/json
 
 ###
 PATCH http://localhost:3001/users/5b56c3aebc37e06f54e0a8ac
-Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGUxQGdtYWlsLmNvbSIsImlhdCI6MTUzMjQxNTYxMX0.zvcbgO9zRK1UnBnhpqM8j_N8q7zPKkR6eR7B0v79LnY; Path=/; HttpOnly
+Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGUxQGdtYWlsLmNvbSIsImlhdCI6MTUzMjQxODc3Nn0.2DFgziiu_AYNTcZPhfX0Fz1ePQyfjacq5JFxbHcL0Dk; Path=/; HttpOnly
 Content-Type: application/json
-
 
 {
         "role": "facilitator",

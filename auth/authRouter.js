@@ -18,6 +18,20 @@ router.post('/login', logger, authenticate, (req, res) => {
         }
     
         const token = JWT.sign(payload, JWT_SECRET)
+
+        // const header = JWT.sign(payload, jwtSecret, (err, token) => {
+        //   if(err) {
+        //     res.status(401)
+        //     throw new Error('Bad token')
+        //   }
+        // })
+
+        const cookies = new Cookies(req, res)
+        cookies.set('access_token', token, {
+            secure: false,
+            httpOnly: true
+        })
+        console.log(cookies)
     
         res.cookie('access_token', token, {
           secure: false,

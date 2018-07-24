@@ -43,11 +43,6 @@ function authorize(req, res, next) {
             throw new Error('You are not authorized')
         }
 
-        // if(payload.bond !== '007') {
-        //     permit.fail(res)
-        //     throw new Error('You are not authorized')
-        // }
-
         next()
     })
 }
