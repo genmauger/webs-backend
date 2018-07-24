@@ -43,14 +43,6 @@ router.post('/new', (req, res) => {
      })
 });
 
-//   router.put('/:id/new', function (req, res) {
-//     const id = req.params.id
-//     Organisation.findOne({ _id: id }), function (err, organisation) {
-//       if(err) return res.status(500).send(err);
-//       organisation.save()
-//       return res.json(organisation)
-//     }
-//   })
 
 
   router.put('/:id/locnew', function (req, res, next) {
@@ -82,6 +74,59 @@ router.put('/:id/:id_loc/roomnew', function (req, res, next) {
     })
 
 });
+
+
+
+
+// remove location  locremove
+router.put('/:id/:id_loc/locremove', function (req, res, next) {
+    Organisation.findOne({ _id: req.params.id }, function (err, organisation) {
+        if (err) return next(err);
+
+
+        for (let i = 0; i < organisation.locations.length; i++) {
+            
+            if (organisation.locations[i]._id == req.params.id_loc) {
+                var ind = i
+            }
+        }
+        organisation.locations[ind].remove()
+        organisation.save()
+        return res.json(organisation)
+    })
+
+});
+
+
+
+
+router.put('/:id/:id_loc/:id_room/roomremove', function (req, res, next) {
+    Organisation.findOne({ _id: req.params.id }, function (err, organisation) {
+        if (err) return next(err);
+
+
+        for (let i = 0; i < organisation.locations.length; i++) {
+            
+            if (organisation.locations[i]._id == req.params.id_loc) {
+                var indLoc = i
+            }
+        }
+
+        for (let i = 0; i < organisation.locations[indLoc].rooms.length; i++) {
+            
+            if (organisation.locations[indLoc].rooms[i]._id == req.params.id_room) {
+                var indRoom = i
+            }
+        }
+
+        organisation.locations[indLoc].rooms[indRoom].remove()
+        organisation.save()
+        return res.json(organisation)
+    })
+
+});
+
+
 
 
 
