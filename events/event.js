@@ -1,6 +1,10 @@
 const mongoose = require('../db/connectdb')
 const { Schema } = mongoose
 const User = require('../users/user')
+const autopopulate = require('mongoose-autopopulate')
+const workshopSchema = require('../workshops/Workshop')
+const userSchema = require('../users/user')
+const organisationSchema = require('../organisations/organisation')
 
 const bookingSchema = new Schema({
 
@@ -16,19 +20,22 @@ const bookingSchema = new Schema({
 })
 
 const eventSchema = new Schema({
-    title: {
-        type: String,
-        required: true,
-        index: true
-    },
+    title: [{
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: 'Workshops',
+            autopopulate: true,
+        }
+    }],
     facilitators: String,
     facilitatorObjs: [
         {
-        
         id:{
-            type: Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             required: true,
-            ref: 'User'
+            ref: 'Users',
+            autopopulate: true,
         },
         status: String
         }
@@ -39,10 +46,18 @@ const eventSchema = new Schema({
     notes: String,
     onsite: Boolean,
     price: Number,
-    organisation: String,
+    organisation: {
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: 'Organisations',
+            autopopulate: true,
+        }
+    },
     bookings: [bookingSchema]
 })
+eventSchema.plugin(autopopulate);
 
-const Event = mongoose.model('event', eventSchema)
+const Event = mongoose.model('Event', eventSchema, 'events')
 
 module.exports = Event

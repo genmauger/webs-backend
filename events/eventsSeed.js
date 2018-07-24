@@ -3,100 +3,32 @@ const Event = require('./event')
 
 const events = [
     {
-        title: 'Unity Gamemaker for Kids',
-        facilitators: 'Tyson Butler-Boschma (Ph. 0448639179)',
-        facilitatorObjs: [
-            {
-                id: '5b52c6577d2c0202d402bda4',
-                status: 'pending'
-            }
+        "title": {
+            "id": "5b55cd9e4bfb468b379302a0"
+        },
+        "organisation": {
+            "id": "5b55ce45b9f4c28b881efd01"
+        },
+        "facilitatorObjs": [
+        {
+        "id": "5b55cdfcf4e1cc8b5d0600cf",
+        "status": "Pending"
+        }
         ],
-        attendees: 0,
-        status: 'Confirmed',
-        creator: null,
-        notes: '3 as extra child Amelie (Chi)  from App Course cancelled.',
-        onsite: true,
-        price: 55000,
-        organisation: 'CA Mel',
-
-        bookings: [
-            {
-                start: '08/04/2018 12:00',
-                end: '08/04/2018 16:00',
-                location: 'Room 005'
-            },
-            {
-                start: '08/11/2018 12:00',
-                end: '08/11/2018 16:00',
-                location: 'Room 005'
-            },
-            {
-                start: '08/18/2018 12:00',
-                end: '08/18/2018 16:00',
-                location: 'Room 005'
-            }
-        ]
-    },
-    {
-        title: 'Hands-on Coding for Intermediate',
-        facilitatorss: 'Simon Dwyer',
-        facilitators: '5b502d77b043e3052a687882',
-        facilitatorObjs: [
-            {
-                id: '5b502d77b043e3052a687881',
-                status: 'pending'
-            },
-            {
-                id: '5b52c6577d2c0202d402bda4',
-                status: 'confirmed'
-            }
+        "attendees": 0,
+        "status": "Pending",
+        "creator": null,
+        "notes": "trying to get refs working again",
+        "onsite": true,
+        "bookings": [
+        {
+        "start": "2018-07-23T13:20:00.586Z",
+        "end": "2018-07-23T13:20:00.586Z",
+        "location": "Melbourne"
+        }
         ],
-        attendees: 20,
-        status: 'Confirmed',
-        creator: null,
-        notes: '',
-        onsite: true,
-        price: 55000,
-        organisation: 'CA Mel L13-RM18',
-
-        bookings: [
-            {
-                start: '08/25/2018 10:00',
-                end: '08/25/2018 16:00',
-                location: 'CA Mel L13-RM18'
-            },
-            {
-                start: '09/01/2018 10:00',
-                end: '09/01/2018 16:00',
-                location: 'CA Mel L13-RM18'
-            }
-        ]
-    },
-    {
-        title: 'Hands-on Coding for Beginners',
-        facilitatorss: 'Simon Dwyer',
-        facilitators: '5b502d77b043e3052a687882',
-        attendees: 20,
-        status: 'Pending',
-        creator: null,
-        notes: '',
-        onsite: true,
-        price: 55000,
-        organisation: 'TBC',
-
-        bookings: [
-            {
-                start: '09/22/2018 10:00',
-                end: '09/22/2018 16:00',
-                location: 'TBC'
-            },
-            {
-                start: '09/29/2018 10:00',
-                end: '09/29/2018 16:00',
-                location: 'TBC'
-            }
-        ]
-    }
+        "__v": 0
+        }
 ]
 
 Event.create(events)

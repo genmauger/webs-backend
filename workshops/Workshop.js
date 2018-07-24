@@ -6,6 +6,6 @@ const workshopSchema = new Schema({
     skills_required: Array
 })
 
-const Workshop = mongoose.model('workshop', workshopSchema)
+const Workshop = mongoose.model('Workshops', workshopSchema)
 
 module.exports = Workshop
