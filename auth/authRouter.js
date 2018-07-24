@@ -2,11 +2,11 @@ const express = require('express')
 const JWT = require('jsonwebtoken')
 const User = require('../users/user')
 const JWT_SECRET = process.env.JWT_SECRET
-
+const {logger, authenticate} = require('./authMiddleware')
 
 const router = express.Router()
 
-router.post('/login', (req, res) => {
+router.post('/login', logger, authenticate, (req, res) => {
 
   const {email, password} = req.body
 
