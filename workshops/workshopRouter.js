@@ -4,7 +4,7 @@ const router = express.Router()
 
 
 // GET ALL WORKSHOPS
-router.get('/', (req, res) => {
+router.get('/', authorize, (req, res) => {
     Workshop.find()
     .then(workshops => {
         res.status(200).json(workshops)
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 })
 
 // GET SINGLE WORKSHOP
-router.get('/:id', (req, res) => {
+router.get('/:id', authorize, (req, res) => {
     Workshop.findById(req.params.id, function(err, workshop){
         if(err) return res.status(500).send(err.message)
         return res.json(workshop)
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
 })
 
 // ADD WORKSHOP
-router.post('/new', (req, res) => {
+router.post('/new', authorize, (req, res) => {
     const workshop = new Workshop(req.body)
     workshop.save()
     .then(res.status(201).json(workshop))
@@ -31,14 +31,14 @@ router.post('/new', (req, res) => {
 })
 
 // EDIT WORKSHOP
-router.put('/:id', (req, res) => {
+router.put('/:id', authorize, (req, res) => {
     Workshop.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, workshop){
         if(err) return res.status(500).send(err.message)
         return res.json(workshop)
     })
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authorize, (req, res) => {
     Workshop.findByIdAndRemove({_id: req.params.id}, function(err, workshop){
         if(err){
             throw err;

@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
 
 // Create new notification
 
-router.post('/new', (req, res) => {
+router.post('/new', authorize, (req, res) => {
 
     const notification = new Notification(req.body)
     notification.save()
@@ -42,7 +42,7 @@ router.post('/new', (req, res) => {
 });
 
 // Show one
-router.get('/:id', (req, res) => {
+router.get('/:id', authorize, (req, res) => {
     const id = req.params.id
     Notification.findById({ _id: id} )
     .then(notification => {
@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
 })
 
 // Update 
-router.patch("/:id", (req, res, next) => {
+router.patch("/:id", authorize, (req, res, next) => {
     // const id = req.params.productId;
     const id = req.params.id
     

@@ -3,18 +3,18 @@ POST http://localhost:3000/users/new
 Content-Type: application/json
 
 {
-        "email": "hotmail@gmail.com",
-        "password": "1234567",
+        "email": "example@gmail.com",
+        "password": "password",
         "role": "facilitator",
-        "f_name": "Sveto",
-        "l_name": "Stojcevic",
-        "contact_no": "0466 558 570",
-        "default_location": "120 Spenser",
+        "f_name": "Steve",
+        "l_name": "Christenson",
+        "contact_no": "0466 645 321",
+        "default_location": "120 Spencer St",
         "availability": true,
         "longitude": 0,
         "Latitude": 0,
         "skills": [
-            {"skill": "Ruby on Rails"},
+            {"skill": "React Authentication"},
             {"skill": "JavaScript"},
             {"skill": "VBA"}
         ]
