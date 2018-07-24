@@ -14,8 +14,9 @@ const authRouter = require('./auth/authRouter')
 const workshopRouter = require('./workshops/workshopRouter')
 // const authRouter = require('./auth/authRouter')
 
-const PORT = 3000
+const PORT = 3001
 app.use(bodyParser.json())
+app.use(cookieParser())
 
 
 // var whitelist = ['https://redhillwebs.com.au', 'http://localhost:3000', 'http://localhost:3001']

@@ -6,10 +6,12 @@
   "scripts": {
     "now start": "node index.js",
     "start": "node index.js",
-    "seed": "node ./events/eventsSeed.js",
+    "seed": "node ./users/usersSeed.js",
     "dev": "nodemon index.js",
     "test": "jest",
-    "seedWorkshops": "node ./workshops/workshopSeed.js"
+    "seedWorkshops": "node ./workshops/workshopSeed.js",
+    "seedUsers": "node ./users/usersSeed.js",
+    "seedOrganisations": "node ./organisations/organisationsSeed.js"
   },
   "author": "Sveto, Gen, Steven, Cameo",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.4",
+    "mongoose-autopopulate": "^0.8.0",
     "permit": "^0.2.4"
   },
   "devDependencies": {

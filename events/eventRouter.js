@@ -1,16 +1,18 @@
 const express = require('express')
 const Event = require('./event')
 const router = express.Router()
+const mongoose = require('mongoose')
 
 
 router.get('/', (req, res) => {
-    Event.find()
+    Event.find().populate('title')
         .then(events => {
             res.status(200).json(events)
         })
         .catch(err => {
             res.status(500).json({ error: err.message })
         })
+
 })
 
 

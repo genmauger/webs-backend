@@ -1,5 +1,5 @@
 ###
-POST https://webs-backend-dev.now.sh/users/new
+POST http://localhost:3000/users/new
 Content-Type: application/json
 
 {
@@ -25,10 +25,16 @@ GET http://localhost:3000/users/
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/users/5b5187f28a45e80493cb5041
+PUT http://localhost:3000/users/5b52c6577d2c0202d402bda4/newskill
+Content-Type: application/json
 
-        "skills": []
+    {
+        "skill": "VBA"
     }
+
+###
+PUT http://localhost:3000/users/5b52c6577d2c0202d402bda4/5b5598d9b363ee04d2e32f5a/skillremove
+Content-Type: application/json
 
 ###
 GET http://localhost:3000/users/
@@ -36,7 +42,6 @@ Content-Type: application/json
 
 ###
 PATCH http://localhost:3000/users/5b5014a1ed73d1047d79129c
->>>>>>> 89194ef44fcbab40956cd92e7e43be10ae5529cf
 Content-Type: application/json
 
 {
@@ -54,7 +59,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/users/5b5187f28a45e80493cb5041
+DELETE http://localhost:3000/users/5b5588ca66519903baf2025f
 Content-Type: application/json
 
 
