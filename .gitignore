@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-productive.env
-=======
 production.env
 aaacmd
->>>>>>> 9040ff933647a863866bb1fcce12ca49b803b30e
 .env
 *.env
 aaacmd
-node_modules
+/node_modules
