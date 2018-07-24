@@ -1,4 +1,4 @@
 production.env
 aaacmd
 .env
-node_modules
+/node_modules
