@@ -20,7 +20,7 @@ function logger(req, res, next){
 }
 
 function authenticate(req, res, next) {
-    // req.query req.params.id (23)
+    //TODO: IS authorize needed in the function params?
     const {email, password} = req.body
 
     const authed = auth.isAuthenticUser(email, password)

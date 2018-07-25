@@ -18,7 +18,7 @@ router.post('/login', logger, authenticate, (req, res) => {
         }
     
         const token = JWT.sign(payload, JWT_SECRET)
-    
+
         res.cookie('access_token', token, {
           secure: false,
           httpOnly: true
@@ -37,7 +37,7 @@ router.post('/login', logger, authenticate, (req, res) => {
 })
 
 router.post('/logout', logger, (req, res) => {
-  res.clearCookie('access_token').send({ message: 'Logged out. Bye 😭' })
+  res.clearCookie('access_token').send({ message: 'Logged out' })
 })
 
 router.post('/register', (req, res) => {
@@ -53,7 +53,6 @@ router.post('/register', (req, res) => {
       res.status(500)
       throw new Error(err.message)
   })
-
 })
 
 module.exports = router

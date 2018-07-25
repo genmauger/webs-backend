@@ -53,6 +53,7 @@ router.patch("/:id", authorize, (req, res, next) => {
     
     User.findByIdAndUpdate({ _id: id },  req.body, {new: true}, function(err, user) {
         if (err) return res.status(500).send(err);
+        console.log("Step 4: Patch route")
         return res.json(user);
     });
   });
