@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3001/users/new
+POST http://localhost:3000/users/new
 Content-Type: application/json
 
 {
@@ -21,11 +21,11 @@ Content-Type: application/json
     }
 
 ###
-GET http://localhost:3001/users/
+GET http://localhost:3000/users/
 Content-Type: application/json
 
 ###
-PUT http://localhost:3001/users/5b52c6577d2c0202d402bda4/newskill
+PUT http://localhost:3000/users/5b52c6577d2c0202d402bda4/newskill
 Content-Type: application/json
 
     {
@@ -33,15 +33,15 @@ Content-Type: application/json
     }
 
 ###
-PUT http://localhost:3001/users/5b52c6577d2c0202d402bda4/5b5598d9b363ee04d2e32f5a/skillremove
+PUT http://localhost:3000/users/5b52c6577d2c0202d402bda4/5b5598d9b363ee04d2e32f5a/skillremove
 Content-Type: application/json
 
 ###
-GET http://localhost:3001/users/
+GET http://localhost:3000/users/
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3001/users/5b5014a1ed73d1047d79129c
+PATCH http://localhost:3000/users/5b5014a1ed73d1047d79129c
 Content-Type: application/json
 
 {
@@ -59,12 +59,12 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3001/users/5b5588ca66519903baf2025f
+DELETE http://localhost:3000/users/5b5588ca66519903baf2025f
 Content-Type: application/json
 
 
 ###
-PUT http://localhost:3001/events/5b4c2104b4cb4b0806fbe29c/new
+PUT http://localhost:3000/events/5b4c2104b4cb4b0806fbe29c/new
 Content-Type: application/json
 
             {
@@ -74,6 +74,6 @@ Content-Type: application/json
             }
 
 ###
-PUT http://localhost:3001/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55aa/remove
+PUT http://localhost:3000/events/5b4bf460677db10456ab55a7/5b4bf47c677db10456ab55aa/remove
 Content-Type: application/json
 
