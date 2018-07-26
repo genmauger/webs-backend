@@ -20,10 +20,12 @@ function logger(req, res, next){
 }
 
 function authenticate(req, res, next) {
-    //TODO: IS authorize needed in the function params?
+
     const {email, password} = req.body
+    console.log("email: " + email)
 
     const authed = auth.isAuthenticUser(email, password)
+    
     if(!authed) {
         res.status(401)
         next(new Error('Not authorized!'))
@@ -33,18 +35,17 @@ function authenticate(req, res, next) {
 }
 
 function authorize(req, res, next) {
-
-    console.log('Here We Are, In The Function. 🎉')
-    console.log('Here is the cookie 🍪:' + req.cookies.access_token)
+    console.log("token:" + req.cookies.access_token)
 
     const token = req.cookies.access_token
     // const token = permit.check(req)
-    console.log('Here is the token 🎟:' + token)
+    console.log('Here is the token:' + token)
 
     const jwtSecret = process.env.JWT_SECRET
     JWT.verify(token, jwtSecret, (err, payload) => {
         
         if(err) {
+            console.log(err)
             permit.fail(res)
             throw new Error('You are not authorized')
         }

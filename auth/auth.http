@@ -18,7 +18,7 @@ Content-Type: application/json
 {
         "role": "facilitator",
         "f_name": "Gen",
-        "l_name": "M",
+        "l_name": "Mauger",
         "contact_no": "0466 558 571",
         "default_location": "220 Spencer St",
         "availability": true,

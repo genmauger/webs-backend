@@ -12,12 +12,15 @@ router.post('/login', logger, authenticate, (req, res) => {
 
   User.isAuthenticUser(email, password)
     .then(() => {
+        console.log("isAuthenticUser")
 
         const payload = {
           email
         }
     
         const token = JWT.sign(payload, JWT_SECRET)
+
+        console.log("token: " + token)
 
         res.cookie('access_token', token, {
           secure: false,

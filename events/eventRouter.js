@@ -7,6 +7,7 @@ const {authorize} = require('../auth/authMiddleware')
 router.get('/', authorize, (req, res) => {
     Event.find().populate('title')
         .then(events => {
+            console.log(events)
             res.status(200).json(events)
         })
         .catch(err => {
