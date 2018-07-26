@@ -14,7 +14,7 @@ const authRouter = require('./auth/authRouter')
 const workshopRouter = require('./workshops/workshopRouter')
 // const authRouter = require('./auth/authRouter')
 
-const PORT = 3001
+const PORT = 3000
 app.use(bodyParser.json())
 app.use(cookieParser())
 

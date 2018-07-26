@@ -16,19 +16,17 @@ const bookingSchema = new Schema({
         type: Date,
         required: true
     },
-    location: String
+    location: String,
+    room: String
 })
 
 const eventSchema = new Schema({
-    title: [{
-        id: {
+    title: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
             ref: 'Workshops',
             autopopulate: true,
-        }
-    }],
-    facilitators: String,
+        },
     facilitatorObjs: [
         {
         id:{
@@ -47,12 +45,10 @@ const eventSchema = new Schema({
     onsite: Boolean,
     price: Number,
     organisation: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: 'Organisations',
-            autopopulate: true,
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Organisations',
+        autopopulate: true,
     },
     bookings: [bookingSchema]
 })
