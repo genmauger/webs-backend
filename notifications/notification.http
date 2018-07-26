@@ -1,24 +1,29 @@
 ###
-POST https://webs-backend-dev.now.sh/notifications/new
+POST http://localhost:3000/notifications/new
 Content-Type: application/json
 
-{
-        "message": "testadmin@gmail.com",
-        "recipient": "sveto",
-        "time": "12/23/2018 10:00",
-        "unread": true
+    {
+        "message": "XXX03",
+        "recipient": "user@gmail.com",
+        "time": "08/04/2018 12:00",
+        "unread": false
     }
 
 ###
-GET https://webs-backend-dev.now.sh/notifications
-Content-Type: application/json
-
-
-
-###
-GET http://localhost:3001/notifications/5b5158b0e0f9cd0294d56108
+GET http://localhost:3000/notifications/
 Content-Type: application/json
 
 ###
-GET https://webs-backend-dev.now.sh/notifications/5b515f14e6ac3042c9665def
+GET http://localhost:3000/notifications/5b51844a6601e3458483f8f3
 Content-Type: application/json
+
+###
+PATCH http://localhost:3000/notifications/5b518f2c86236a473687ed16
+Content-Type: application/json
+
+    {
+        "message": "XXX02",
+        "recipient": "user@gmail.com",
+        "time": "08/04/2018 12:10",
+        "unread": false
+    }

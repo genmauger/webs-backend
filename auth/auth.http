@@ -3,24 +3,24 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json 
 
 {
-  "email": "samara.jesney@gmail.com",
-  "password": "1234567"
+  "email": "example1@gmail.com",
+  "password": "password"
 }
 
 ###
-PATCH http://localhost:3000/users/5b5566b001430c08da549bf0
-Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbWFyYS5qZXNuZXlAZ21haWwuY29tIiwiaWF0IjoxNTMyMzIzNTI2fQ.q4L-L8DTyUjJ3yqZCw34UkTda096QBS1bSw2oPH98WY; Path=/; HttpOnly
+POST http://localhost:3000/auth/logout
+Content-Type: application/json 
+
+###
+PATCH http://localhost:3000/users/5b56c3aebc37e06f54e0a8ac
 Content-Type: application/json
 
-
 {
-   "email": "test@gmail.com",
-        "password": "1234567",
         "role": "facilitator",
-        "f_name": "Sveto",
-        "l_name": "Stojcevic",
-        "contact_no": "0466 558 570",
-        "default_location": "120 Spenser St",
+        "f_name": "Gen",
+        "l_name": "Mauger",
+        "contact_no": "0466 558 571",
+        "default_location": "220 Spencer St",
         "availability": true,
         "longitude": 0,
         "Latitude": 0,
@@ -32,7 +32,7 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-     "email": "test@gmail.com",
+     "email": "test1@gmail.com",
         "password": "1234567",
         "role": "facilitator",
         "f_name": "Joel",

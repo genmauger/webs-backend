@@ -35,11 +35,9 @@ const userSchema = new Schema({
 
 // returns a promise so it can be handled in the route
 userSchema.statics.isAuthenticUser = async function(email, password) {
-    
     const user = await this.findOne({email}).select('password')
-
-    // no user in database
-    if(!user) {
+    try {
+        if(!user) {
       // return a reject promise
         return new Promise.reject({reason: "No user Found"})
     }
@@ -47,6 +45,11 @@ userSchema.statics.isAuthenticUser = async function(email, password) {
     const hash = user.password
     // user password either correct or incorrect, return promise
     return await bcrypt.compare(password, hash)
+    } catch(err) {
+        return new Error('error')
+    }
+    // no user in database
+    
 
 }
 
