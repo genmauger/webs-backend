@@ -14,7 +14,7 @@ const authRouter = require('./auth/authRouter')
 const workshopRouter = require('./workshops/workshopRouter')
 // const authRouter = require('./auth/authRouter')
 
-const PORT = 3001
+const PORT = 3000
 app.use(bodyParser.json())
 app.use(cookieParser())
 
@@ -31,12 +31,12 @@ app.use(cookieParser())
 //     }
 // }  http://localhost:3000
 
-const corsOptions = {
-    origin: '*',
+app.use(cors({
+    // front end cors on reponse
+    origin: process.env.CORS_FRONTEND_URL,
     credentials: true
-}
+}))
 
-app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use('/events', eventRouter)
 app.use('/organisations', organisationRouter)

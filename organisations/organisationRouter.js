@@ -1,9 +1,9 @@
 const express = require('express')
 const Organisation = require('./organisation')
 const router = express.Router()
+const {authorize} = require('../auth/authMiddleware')
 
-
-router.get('/', (req, res) => {
+router.get('/', authorize, (req, res) => {
   Organisation.find()
   .then(organisations => {
     res.status(200).json(organisations)
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     res.status(500).json({ error: err.message })
   });
 
-  router.get('/:id', (req, res) => {
+  router.get('/:id', authorize, (req, res) => {
     const id = req.params.id
     Organisation.findById(id, 
     function(err, organisation) {
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
   )})
 });
 
-router.patch('/:id', (req, res, next) => {
+router.patch('/:id', authorize, (req, res, next) => {
   // const id = req.params.productId;
   const id = req.params.id
   
@@ -32,7 +32,7 @@ router.patch('/:id', (req, res, next) => {
   })
 });
 
-router.post('/new', (req, res) => {
+router.post('/new', authorize, (req, res) => {
  const organisation = new Organisation(req.body)
  organisation.save()
      .then(() => {
@@ -45,7 +45,7 @@ router.post('/new', (req, res) => {
 
 
 
-  router.put('/:id/locnew', function (req, res, next) {
+  router.put('/:id/locnew', authorize, function (req, res, next) {
     Organisation.findOne({ _id: req.params.id }, function (err, organisation) {
         if (err) return next(err);
 
@@ -57,7 +57,7 @@ router.post('/new', (req, res) => {
 
 });
 
-router.put('/:id/:id_loc/roomnew', function (req, res, next) {
+router.put('/:id/:id_loc/roomnew', authorize, function (req, res, next) {
     Organisation.findOne({ _id: req.params.id }, function (err, organisation) {
         if (err) return next(err);
 
@@ -79,7 +79,7 @@ router.put('/:id/:id_loc/roomnew', function (req, res, next) {
 
 
 // remove location  locremove
-router.put('/:id/:id_loc/locremove', function (req, res, next) {
+router.put('/:id/:id_loc/locremove', authorize, function (req, res, next) {
     Organisation.findOne({ _id: req.params.id }, function (err, organisation) {
         if (err) return next(err);
 
@@ -100,7 +100,7 @@ router.put('/:id/:id_loc/locremove', function (req, res, next) {
 
 
 
-router.put('/:id/:id_loc/:id_room/roomremove', function (req, res, next) {
+router.put('/:id/:id_loc/:id_room/roomremove', authorize, function (req, res, next) {
     Organisation.findOne({ _id: req.params.id }, function (err, organisation) {
         if (err) return next(err);
 
@@ -132,7 +132,7 @@ router.put('/:id/:id_loc/:id_room/roomremove', function (req, res, next) {
 
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authorize, (req, res) => {
  const id = req.params.id
  Organisation.findByIdAndRemove(id, function (err, organisation) {
      if (err) {

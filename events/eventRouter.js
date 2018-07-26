@@ -2,11 +2,12 @@ const express = require('express')
 const Event = require('./event')
 const router = express.Router()
 const mongoose = require('mongoose')
+const {authorize} = require('../auth/authMiddleware')
 
-
-router.get('/', (req, res) => {
+router.get('/', authorize, (req, res) => {
     Event.find().populate('title')
         .then(events => {
+            console.log(events)
             res.status(200).json(events)
         })
         .catch(err => {
@@ -16,7 +17,7 @@ router.get('/', (req, res) => {
 })
 
 
-router.patch("/:id", (req, res, next) => {
+router.patch("/:id", authorize, (req, res, next) => {
     // const id = req.params.productId;
     const id = req.params.id
     
@@ -27,7 +28,7 @@ router.patch("/:id", (req, res, next) => {
   });
        
 
-router.post('/new', (req, res) => {
+router.post('/new', authorize, (req, res) => {
 
     const event = new Event(req.body)
     event.save()
@@ -40,7 +41,7 @@ router.post('/new', (req, res) => {
 })
 
 
-router.put('/:id/new', function (req, res, next) {
+router.put('/:id/new', authorize, function (req, res, next) {
     Event.findOne({ _id: req.params.id }, function (err, event) {
         if (err) return next(err);
 
@@ -52,7 +53,7 @@ router.put('/:id/new', function (req, res, next) {
 
 });
 
-router.put('/:id/facnew', function (req, res, next) {
+router.put('/:id/facnew', authorize, function (req, res, next) {
     Event.findOne({ _id: req.params.id }, function (err, event) {
         if (err) return next(err);
 
@@ -64,7 +65,7 @@ router.put('/:id/facnew', function (req, res, next) {
 
 });
 
-router.put('/:id/:id_sub/facremove', function (req, res, next) {
+router.put('/:id/:id_sub/facremove', authorize, function (req, res, next) {
     Event.findOne({ _id: req.params.id }, function (err, event) {
         if (err) return next(err);
 
@@ -82,7 +83,7 @@ router.put('/:id/:id_sub/facremove', function (req, res, next) {
 
 });
 
-router.put('/:id/:id_sub/remove', function (req, res, next) {
+router.put('/:id/:id_sub/remove', authorize, function (req, res, next) {
     Event.findOne({ _id: req.params.id }, function (err, event) {
         if (err) return next(err);
 
@@ -100,7 +101,7 @@ router.put('/:id/:id_sub/remove', function (req, res, next) {
 
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authorize, (req, res) => {
     const id = req.params.id
     Event.findByIdAndRemove(id, function (err, event) {
         if (err) {
